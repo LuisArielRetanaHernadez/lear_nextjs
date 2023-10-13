@@ -6,3 +6,13 @@ export default function Post() {
 
   </Layout>
 }
+
+
+export async function getStaticPathc () {
+  const paths = getAllPostIds();
+
+  return {
+    paths,
+    fallback: false
+  }
+}
