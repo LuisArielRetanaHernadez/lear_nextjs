@@ -25,38 +25,6 @@ export default function Layout({children, home}) {
       <meta name='twitter:card' content='summary_large_image'/>
     </Head>
     <header className={styles.header} >
-      {
-        home ? (
-          <>
-            <Image 
-              priority
-              src='/images/profile.jpg'
-              className={utilsStyles.borderCircle}
-              height={144}
-              width={144}
-              alt=''
-            />
-            <h1 className={utilsStyles.heading2Xl}>{name}</h1>
-          </>
-        ) : (
-          <>
-            <Link href='/'>
-              <Image 
-                property
-                src='/images/profile.jpg'	
-                className={utilsStyles.borderCircle}
-                width={144}
-                height={144}
-              />
-            </Link>
-            <h2 className={utilsStyles.headinLg}>
-              <Link href='/' className={utilsStyles.colorInherit}>
-                {name}
-              </Link>
-            </h2>
-          </>
-        )
-      }
     </header>
     <main>{children}</main>
     {!home && (
